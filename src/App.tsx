@@ -8,7 +8,7 @@ import University from './components/university';
 
 function App() {
   const [query, setQuery] = useState<IUniversityQueryObj>({
-    limit: '200',
+    limit: '150',
     offset: '0'
   });
   const [unis, setUnis] = useState<IUniversity[]>([]);
