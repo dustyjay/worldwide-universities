@@ -46,8 +46,8 @@ function CountrySelect(props: Props) {
     <select
       {...props}
       value={props.value || ''}
-      className='focus:outline-none focus:shadow-none bg-transparent border border-gray-700 rounded-sm px-3 h-[34px]'>
-      <option value=''>Select country</option>
+      className='focus:outline-none focus:shadow-none bg-transparent border border-gray-700 rounded-sm px-3 h-[34px] max-md:w-full'>
+      <option value=''>All countries</option>
       {countries.map((c) => (
         <option value={c.value} key={c.value}>
           {c.meta.flag} {c.label}

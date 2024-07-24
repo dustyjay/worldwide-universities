@@ -2,7 +2,7 @@ import { IUniversity } from '../../models/university.model';
 
 function University(university: IUniversity) {
   return (
-    <div className='shadow-xl rounded-lg bg-white bg-opacity-50 text-left'>
+    <div className='shadow-xl hover:shadow-2xl transition-all rounded-lg bg-white bg-opacity-50 text-left'>
       <div className='h-20 bg-white bg-opacity-50 rounded-t-lg text-3xl flex items-center justify-center'>
         {university.alpha_two_code}
       </div>

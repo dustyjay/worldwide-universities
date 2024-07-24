@@ -1,4 +1,4 @@
-import { InputHTMLAttributes, useEffect, useState } from 'react';
+import { InputHTMLAttributes, useEffect, useRef, useState } from 'react';
 
 type Props = InputHTMLAttributes<HTMLInputElement> & {
   label?: string;
@@ -7,8 +7,14 @@ type Props = InputHTMLAttributes<HTMLInputElement> & {
 
 function SearchBox({ onValueChange, ...props }: Props) {
   const [inputValue, setInputValue] = useState(props.value || '');
+  const hasLoaded = useRef(false);
 
   useEffect(() => {
+    if (!hasLoaded.current) {
+      hasLoaded.current = true;
+      return;
+    }
+
     const timeoutId = setTimeout(() => {
       onValueChange(inputValue.toString());
     }, 1000);

@@ -10,4 +10,6 @@ export type IUniversity = {
 export type IUniversityQueryObj = {
   name?: string;
   country?: string;
+  offset: string;
+  limit: string;
 };
